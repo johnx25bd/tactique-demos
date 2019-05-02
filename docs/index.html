@@ -48,22 +48,8 @@
       center: [0.000000, 0.000000],
       zoom: 1.4
     });
-    // mapboxgl.accessToken = 'pk.eyJ1Ijoicm9iaXNvbml2IiwiYSI6ImNqbjM5eXEwdjAyMnozcW9jMzdpbGk5emoifQ.Q_S2qL8UW-UyVLikG_KqQA';
-    // var map = new mapboxgl.Map({
-    //   container: "map",
-    //   style: "mapbox://styles/robisoniv/cjsakv8wt05e01glo4wqjt1e1",
-    //   center: [89.3228889, 3.580117],
-    //   zoom: 3
-    // });
 
     map.on("load", function() {
-
-      // map.addSource("navwarning-points-src", {
-      //   "type": "geojson",
-      //   "data":
-      //
-      // });
-
 
       map.addSource("linestrings-navwarnings-src", {
         "type": "geojson",
@@ -11861,7 +11847,6 @@
 
       });
 
-
       map.addLayer({
         "id": "navwarning-linestrings",
         "type": "line",
@@ -11949,7 +11934,7 @@
 
           new mapboxgl.Popup()
             .setLngLat(coordinates)
-            .setHTML("<div class='navwarning-description'><br /><h2>" + header + "</h2>" + description + "<div><img src='./logo.png' />")
+            .setHTML("<div class='navwarning-description'><br /><h2>" + header + "</h2>" + description + "<div><img src='./assets/logo.png' />")
             .addTo(map);
         })
       }
@@ -11968,7 +11953,7 @@
 
         new mapboxgl.Popup()
           .setLngLat(coordinates)
-          .setHTML("<div class='navwarning-description'><br /><h2>" + header + "</h2>" + description + "<div><img src='./logo.png' />")
+          .setHTML("<div class='navwarning-description'><br /><h2>" + header + "</h2>" + description + "<div><img src='./assets/logo.png' />")
           .addTo(map);
       })
     });
